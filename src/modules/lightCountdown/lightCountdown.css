@@ -1,0 +1,48 @@
+.lightcountdown__container {
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.lightcountdown__digits {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.lightcountdown__digit {
+    display: flex;
+    justify-content: center;
+    margin: 0 3px 0;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    width: 2em;
+    background-color: #242424;
+    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+}
+
+.lightcountdown__separator {
+    padding-top: 1.2em;
+}
+
+.lightcountdown__text{
+    margin-top: 0.5em;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+  .lightcountdown__digit {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 576px) {
+  .lightcountdown__digit {
+    font-size: 14px;
+  }
+}

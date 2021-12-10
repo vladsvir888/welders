@@ -1,0 +1,23 @@
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+
+// helpers
+@import "./helpers/variables";
+@import "./helpers/functions";
+@import "./helpers/mixins";
+
+// base
+@import "./base/font";
+@import "./base/common";
+
+// components
+@import "./components/btn";
+@import "./components/hamburger";
+
+// blocks
+@import "./blocks/header";
+@import "./blocks/nav";
+@import "./blocks/promo";

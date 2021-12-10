@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  padding: 0;
+
+  list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+
+  clip: rect(0 0 0 0);
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1700px; // 1400px
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+body {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 14px;
+  color: get-color('primary');
+}
