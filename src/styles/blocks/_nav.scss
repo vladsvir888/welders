@@ -40,6 +40,9 @@
   &__link {
     position: relative;
 
+    display: inline-block; // it's necessary because overflow works with block elements
+    overflow: hidden;
+
     font-size: 24px;
     font-weight: 700;
     color: get-color('primary');
@@ -52,24 +55,37 @@
       font-size: 16px;
     }
 
-    &::before {
+    &::before,
+    &::after {
       position: absolute;
-      bottom: -3px;
       left: 0;
 
-      width: 0;
-      height: 3px;
+      width: 100%;
+      height: 2px;
 
       background-color: get-color('primary');
 
-      transition: width $transition-time;
+      transition: transform 0.8s;
 
       content: '';
     }
 
+    &::before {
+      bottom: 0;
+
+      transform: translateX(-100%);
+    }
+
+    &::after {
+      top: 0;
+
+      transform: translateX(100%);
+    }
+
     &:hover {
-      &::before {
-        width: 100%;
+      &::before,
+      &::after {
+        transform: translateX(0);
       }
     }
   }
@@ -81,7 +97,8 @@
 
 @media (hover: none) {
   .menu__link {
-    &::before {
+    &::before,
+    &::after {
       content: none;
     }
   }

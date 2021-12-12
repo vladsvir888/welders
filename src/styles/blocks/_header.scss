@@ -53,12 +53,40 @@
   }
 
   &__callback-btn {
+    position: relative;
+
     padding: 8px 16px;
 
     background: get-color('btn_color');
+    overflow: hidden;
 
     font-size: 20px;
     color: #fff;
+
+    &::after {
+      position: absolute;
+      top: -50px;
+      left: -75px;
+
+      height: 160px;
+      width: 50px;
+
+      background: #fff;
+      opacity: 0.2;
+      transform: rotate(35deg);
+
+      transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+
+      content: "";
+    }
+
+    &:hover {
+      &::after {
+        left: 120%;
+
+        transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+      }
+    }
 
     @media (max-width: $break_sm) {
       display: none;
