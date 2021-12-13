@@ -1,5 +1,5 @@
-.info {
-  padding: 80px 0;
+.product {
+  padding: 80px 0 40px;
 
   &__container {
     max-width: 1400px;
@@ -29,7 +29,7 @@
 
     color: #fff;
 
-    background: get-color('primary');
+    background: get-color('header_color');
     border-radius: 15px;
   }
 
@@ -62,16 +62,121 @@
   }
 
   &__header-tab {
-    position: relative;
-
     padding: 20px 50px;
 
     background: get-color('btn_color');
-    overflow: hidden;
 
     font-size: 20px;
     color: #fff;
 
-    @include btn-effect;
+    transition: background-color $transition-time;
+
+    &:hover {
+      &:not(.is-active) {
+        background-color: rgba(25, 125, 84, 1);
+      }
+    }
   }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  &__info-img {
+    width: 400px;
+  }
+
+  &__info-reserve {
+    padding: 10px;
+    width: 260px;
+    margin: 0 auto;
+
+    text-align: center;
+    font-weight: 700;
+
+    background: #D90202;
+    border-radius: 5px;
+  }
+
+  &__info-end {
+    margin-left: 100px;
+  }
+
+  &__info-title {
+    margin-bottom: 20px;
+
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+
+  &__info-text {
+    margin-bottom: 15px;
+
+    font-size: 25px;
+  }
+
+  &__info-li {
+    margin-bottom: 5px;
+
+    font-size: 15px;
+
+    &::before {
+      content: '📌';
+    }
+  }
+
+  &__info-price {
+    display: flex;
+    margin-top: 20px;
+
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  &__old-price {
+    margin-right: 20px;
+
+    color: get-color('primary');
+    text-decoration: line-through;
+  }
+
+  &__new-price {
+    color: #D90202;
+  }
+
+  &__info-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 300px;
+  }
+
+  &__info-form-input {
+    margin-bottom: 10px;
+    padding: 10px;
+
+    border: 0;
+    outline: none;
+  }
+
+  &__info-form-btn {
+    padding: 15px;
+
+    color: #fff;
+
+    background-color: #D90202;
+
+    transition: background-color $transition-time;
+
+    &:hover {
+      background-color: rgba(217, 2, 2, 0.8);
+    }
+  }
+}
+
+.product__header-tab.is-active {
+  background: #D90202;
 }

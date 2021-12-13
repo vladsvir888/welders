@@ -79,7 +79,7 @@
             <h2 class="promo__form-title">Заполните форму</h2>
             <div class="promo__form-subtitle">для получения скидки</div>
             <input class="promo__form-input" type="text" placeholder="Номер телефона..." required>
-            <button class="promo__form-btn btn">Забронировать скидку</button>
+            <button class="promo__form-btn btn" type="submit">Забронировать скидку</button>
           </form>
         </div>
         <div class="promo__item">
@@ -133,27 +133,61 @@
   <!-- /.products -->
 
   <!-- product-first -->
-  <section class="info">
-    <div class="container info__container">
-
-      <h2 class="info__title">
-        <span class="info__title-span">Дуговая сварка</span>
+  <section class="product">
+    <div class="container product__container">
+      <h2 class="product__title">
+        <span class="product__title-span">Дуговая сварка</span>
         <span>MMA</span>
       </h2>
-
-      <div class="info__wrap">
-        <div class="info__subtitle">Нужна меньше мощность? Жми</div>
-
-        <div class="info__header">
-          <button class="info__header-tab btn">320 PRO</button>
-          <button class="info__header-tab btn">320 PRO S</button>
-          <button class="info__header-tab btn">270 PRO</button>
-          <button class="info__header-tab btn">270 PRO S</button>
-          <button class="info__header-tab btn">250 PRO</button>
-          <button class="info__header-tab btn">200 PRO</button>
+      <div class="product__wrap">
+        <div class="product__subtitle">Нужна меньше мощность? Жми</div>
+        <div class="product__header">
+          <button class="product__header-tab is-active btn">320 PRO</button>
+          <button class="product__header-tab btn">320 PRO S</button>
+          <button class="product__header-tab btn">270 PRO</button>
+          <button class="product__header-tab btn">270 PRO S</button>
+          <button class="product__header-tab btn">250 PRO</button>
+          <button class="product__header-tab btn">200 PRO</button>
+        </div>
+        <div class="product__info">
+          <div class="product__info-start">
+            <img class="product__info-img" src="./assets/images/product-320.png" alt="product-320">
+            <div class="product__info-reserve">Осталось 6 сварщиков по акции</div>
+          </div>
+          <div class="product__info-end">
+            <h3 class="product__info-title">Shtenli MMA-320 PRO</h3>
+            <p class="product__info-text">Характеристики:</p>
+            <ul class="product__info-ul">
+              <li class="product__info-li">
+                Напряжение 220/230 В
+              </li>
+              <li class="product__info-li">
+                Частота 50/60 Гц
+              </li>
+              <li class="product__info-li">
+                Номинальный входной ток 24 А
+              </li>
+              <li class="product__info-li">
+                Диапазон регулировки 20-270 А
+              </li>
+              <li class="product__info-li">
+                Диаметр электрода 1.6-4 мм
+              </li>
+              <li class="product__info-li">
+                Кабель-держак 2,5 м
+              </li>
+            </ul>
+            <div class="product__info-price">
+              <div class="product__old-price">424 руб.</div>
+              <div class="product__new-price">212 руб.</div>
+            </div>
+            <form action="/" class="product__info-form">
+              <input class="product__info-form-input" type="text" placeholder="Номер телефона..." required>
+              <button class="product__info-form-btn btn" type="submit">Заказать</button>
+            </form>
+          </div>
         </div>
       </div>
-
     </div>
   </section>
   <!-- /.product-first -->
@@ -202,11 +236,11 @@
     <div class="container footer__container">
       <h2 class="footer__title">Оставьте свой номер и мы перезвоним Вам</h2>
       <form action="/" class="footer__form">
-        <div class="footer__form-img footer__elem-padding">
+        <div class="footer__form-img">
           <i class="fas fa-phone footer__form-icon"></i>
         </div>
-        <input class="footer__form-input footer__elem-padding" type="text" placeholder="Номер телефона..." required>
-        <button class="footer__form-btn footer__elem-padding">Заказать звонок</button>
+        <input class="footer__form-input" type="text" placeholder="Номер телефона..." required>
+        <button class="footer__form-btn">Заказать звонок</button>
       </form>
       <div class="footer__phones">
         <p class="footer__phones-title">Контакты:</p>
