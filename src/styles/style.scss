@@ -1,9 +1,3 @@
-$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
-@import '~@fortawesome/fontawesome-free/scss/fontawesome';
-@import '~@fortawesome/fontawesome-free/scss/solid';
-@import '~@fortawesome/fontawesome-free/scss/regular';
-@import '~@fortawesome/fontawesome-free/scss/brands';
-
 // helpers
 @import "./helpers/variables";
 @import "./helpers/functions";
@@ -21,3 +15,8 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import "./blocks/header";
 @import "./blocks/nav";
 @import "./blocks/promo";
+@import "./blocks/products";
+@import "./blocks/info";
+@import "./blocks/payment";
+@import "./blocks/delivery";
+@import "./blocks/footer";

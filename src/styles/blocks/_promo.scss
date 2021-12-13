@@ -1,11 +1,15 @@
 .promo {
   position: relative;
 
-  padding-top: 130px;
+  padding: 130px 0 80px;
 
   background: url('../../assets/images/main-bg.jpg') no-repeat 50% / cover;
 
   text-align: center;
+
+  @media (max-width: $break_sm) {
+    padding: 130px 0 40px;
+  }
 
   &::before {
     position: absolute;
@@ -156,7 +160,13 @@
 
     color: #fff;
 
-    background: #D90202;
+    background-color: #D90202;
+
+    transition: background-color $transition-time;
+
+    &:hover {
+      background-color: rgba(217, 2, 2, 0.8);
+    }
   }
 
   &__list-item {

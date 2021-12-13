@@ -1,0 +1,77 @@
+.info {
+  padding: 80px 0;
+
+  &__container {
+    max-width: 1400px;
+  }
+
+  &__title {
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__title-span {
+    position: relative;
+
+    &::after {
+      @include line;
+
+      width: 100%;
+
+      background: get-color('primary');
+    }
+  }
+
+  &__wrap {
+    margin-top: 60px;
+    padding: 30px;
+
+    color: #fff;
+
+    background: get-color('primary');
+    border-radius: 15px;
+  }
+
+  &__subtitle {
+    position: relative;
+
+    margin-bottom: 30px;
+    padding-right: 50px;
+
+    font-size: 25px;
+    text-align: right;
+
+    &::after {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+
+      width: 30px;
+      height: 30px;
+
+      background: url('../../assets/images/arrow-down-right.png') no-repeat 50% / cover;
+
+      content: '';
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__header-tab {
+    position: relative;
+
+    padding: 20px 50px;
+
+    background: get-color('btn_color');
+    overflow: hidden;
+
+    font-size: 20px;
+    color: #fff;
+
+    @include btn-effect;
+  }
+}

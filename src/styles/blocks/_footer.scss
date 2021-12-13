@@ -1,0 +1,105 @@
+.footer {
+  position: relative;
+
+  padding: 40px 0;
+
+  text-align: center;
+  color: #fff;
+
+  background: url('../../assets/images/footer-bg.jpg') no-repeat 50% / cover;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    content: '';
+  }
+
+  &__container {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 28px;
+
+    @media (max-width: $break_sm) {
+      font-size: 22px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    margin: 20px 0;
+  }
+
+  &__form-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #E9ECEF;
+
+    @media (max-width: $break_sm) {
+      display: none;
+    }
+  }
+
+  &__form-icon {
+    path {
+      fill: #000;
+    }
+  }
+
+  &__form-input {
+    border: none;
+    outline: none;
+  }
+
+  &__form-btn {
+    border: none;
+    background-color: #FFC107;
+    cursor: pointer;
+
+    transition: background-color $transition-time;
+
+    &:hover {
+      background-color: rgba(255, 193, 7, 0.9);
+    }
+  }
+
+  &__phones {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 28px;
+
+    @media (max-width: $break_sm) {
+      font-size: 22px;
+    }
+  }
+
+  &__phone {
+    margin-top: 10px;
+
+    color: #fff;
+    font-weight: 700;
+  }
+
+  &__elem-padding {
+    padding: 15px;
+
+    @media (max-width: $break_sm) {
+      padding: 10px;
+    }
+  }
+}
