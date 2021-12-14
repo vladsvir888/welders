@@ -29,7 +29,7 @@ import hamburger from "./modules/hamburger";
 import LightCountdown from "./modules/lightCountdown/lightCountdown";
 import tabs from "./modules/tabs";
 import toTop from "./modules/toTop";
-// import scrollTo from "./modules/scrollTo";
+import scrollTo from "./modules/scrollTo";
 
 form();
 document.addEventListener('DOMContentLoaded', () => {
@@ -38,5 +38,5 @@ document.addEventListener('DOMContentLoaded', () => {
   new LightCountdown(config.lightCountdown).play();
   tabs();
   toTop();
-  // scrollTo();
+  scrollTo();
 });

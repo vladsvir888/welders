@@ -1,41 +1,25 @@
-// export default () => {
-//   document.body.addEventListener('click', (e) => {
-//     if (!e.target.classList.contains('product__header-tab')) return;
-
-//     const closestWrapTabs = e.target.closest('.product__wrap');
-
-//     const tabsContent = closestWrapTabs.querySelectorAll('.product__info');
-
-//     tabsContent.forEach((elem) => {
-//       console.log(elem);
-//     });
-//   })
-// };
+import util from './util';
 
 export default () => {
-  const tabsWrap = document.querySelectorAll('.product__wrap');
+  util.body.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('product__header-tab')) return;
 
-  tabsWrap.forEach( (elem) => {
+    const closestWrapProduct = e.target.closest('.product__wrap');
 
-    const tabs = elem.querySelectorAll('.product__header-tab');
-    const tabsContent = elem.querySelectorAll('.product__info');
+    const prevBtnActive = closestWrapProduct.querySelector('.product__header-tab.is-active');
 
-    for (let i = 0; i < tabs.length; i++) {
-      tabs[i].addEventListener('click', (e) => {
-        const activeTabAttr = e.target.getAttribute('data-tab');
+    prevBtnActive.classList.remove('is-active');
 
-        for (let j = 0; j < tabs.length; j++) {
-          const contentAttr = tabsContent[j].getAttribute('data-tab-content');
+    e.target.classList.add('is-active');
 
-          if (activeTabAttr === contentAttr) {
-            tabs[j].classList.add('is-active');
-            tabsContent[j].classList.add('show');
-          } else {
-            tabs[j].classList.remove('is-active');
-            tabsContent[j].classList.remove('show');
-          }
-        }
-      });
-    }
+    const productInfo = closestWrapProduct.querySelectorAll('.product__info');
+
+    productInfo.forEach(elem => {
+      if (elem.getAttribute('data-tab-content') === e.target.getAttribute('data-tab')) {
+        elem.classList.add('show');
+      } else {
+        elem.classList.remove('show');
+      }
+    });
   });
 };

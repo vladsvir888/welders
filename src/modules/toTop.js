@@ -1,18 +1,19 @@
 export default () => {
-  const toTopBtn = document.querySelector('.btn-top');
+  const topBtn = document.querySelector('.btn-top');
 
   window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 800) {
-      toTopBtn.classList.add('is-active');
+    if (window.pageYOffset > 1200) {
+      topBtn.classList.add('is-active');
     } else {
-      toTopBtn.classList.remove('is-active');
+      topBtn.classList.remove('is-active');
     }
   });
 
-  toTopBtn.addEventListener('click', () => {
+  topBtn.addEventListener('click', () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     });
   });
+  
 };

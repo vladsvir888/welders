@@ -206,7 +206,7 @@
 
      getDefaultDate() {
          let dateEnd = new Date()
-         dateEnd.setDate(dateEnd.getDay() ? dateEnd.getDate() - dateEnd.getDay() + 12 : dateEnd.getDate() + 1)
+         dateEnd.setDate(dateEnd.getDay() ? dateEnd.getDate() - dateEnd.getDay() + 9 : dateEnd.getDate() + 1)
          dateEnd.setHours(0, 0, 0)
          return dateEnd
      }
