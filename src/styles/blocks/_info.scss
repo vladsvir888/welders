@@ -1,5 +1,5 @@
 .product {
-  padding: 80px 0 40px;
+  // padding: 80px 0 40px;
 
   &__container {
     max-width: 1400px;
@@ -9,6 +9,10 @@
     font-size: 40px;
     text-transform: uppercase;
     text-align: center;
+
+    @media (max-width: $break_sm) {
+      font-size: 24px;
+    }
   }
 
   &__title-span {
@@ -20,6 +24,10 @@
       width: 100%;
 
       background: get-color('primary');
+
+      @media (max-width: 815px) {
+        content: none;
+      }
     }
   }
 
@@ -29,23 +37,48 @@
 
     color: #fff;
 
-    background: get-color('header_color');
+    background: get-color('main_bg');
     border-radius: 15px;
+
+    @media (max-width: $break_sm) {
+      padding: 30px 10px;
+      margin-top: 30px;
+    }
   }
 
   &__subtitle {
-    position: relative;
-
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     padding-right: 50px;
 
     font-size: 25px;
     text-align: right;
 
+    &--center {
+      padding-right: 0;
+
+      text-align: center;
+    }
+
+    @media (max-width: $break_xl) {
+      padding-right: 0;
+
+      text-align: center;
+    }
+
+    @media (max-width: 500px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__subtitle-span {
+    position: relative;
+
     &::after {
       position: absolute;
-      top: 10px;
-      right: 15px;
+      top: 40%;
+      right: -55%;
 
       width: 30px;
       height: 30px;
@@ -59,10 +92,20 @@
   &__header {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    &--center {
+      justify-content: center;
+    }
+
+    @media (max-width: $break_xl) {
+      justify-content: center;
+    }
   }
 
   &__header-tab {
     padding: 20px 50px;
+    margin: 10px;
 
     background: get-color('btn_color');
 
@@ -70,6 +113,14 @@
     color: #fff;
 
     transition: background-color $transition-time;
+
+    @media (max-width: $break_xl) {
+      min-width: 200px;
+    }
+
+    @media (max-width: 500px) {
+      width: 100%;
+    }
 
     &:hover {
       &:not(.is-active) {
@@ -79,10 +130,18 @@
   }
 
   &__info {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     margin-top: 30px;
+
+    @media (max-width: $break_md) {
+      flex-direction: column;
+    }
+
+    @media (max-width: $break_sm) {
+      margin-top: 10px;
+    }
   }
 
   &__info-img {
@@ -97,12 +156,24 @@
     text-align: center;
     font-weight: 700;
 
-    background: #D90202;
+    background: get-color('accent');
     border-radius: 5px;
   }
 
   &__info-end {
-    margin-left: 100px;
+    margin-left: 150px;
+
+    @media (max-width: $break_lg) {
+      margin-left: 80px;
+    }
+
+    @media (max-width: $break_md) {
+      margin-left: 0;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__info-title {
@@ -110,12 +181,20 @@
 
     font-size: 40px;
     text-transform: uppercase;
+
+    @media (max-width: $break_sm) {
+      font-size: 21px;
+    }
   }
 
   &__info-text {
     margin-bottom: 15px;
 
     font-size: 25px;
+
+    @media (max-width: $break_sm) {
+      font-size: 20px;
+    }
   }
 
   &__info-li {
@@ -144,7 +223,7 @@
   }
 
   &__new-price {
-    color: #D90202;
+    color: get-color('accent');
   }
 
   &__info-form {
@@ -152,6 +231,10 @@
     flex-direction: column;
     margin-top: 20px;
     width: 300px;
+
+    @media (max-width: $break_sm) {
+      width: 260px;
+    }
   }
 
   &__info-form-input {
@@ -167,7 +250,7 @@
 
     color: #fff;
 
-    background-color: #D90202;
+    background-color: get-color('accent');
 
     transition: background-color $transition-time;
 
@@ -178,5 +261,9 @@
 }
 
 .product__header-tab.is-active {
-  background: #D90202;
+  background-color: get-color('accent');
+}
+
+.product__info.show {
+  display: flex;
 }

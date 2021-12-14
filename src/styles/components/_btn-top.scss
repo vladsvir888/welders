@@ -1,0 +1,30 @@
+.btn-top {
+  position: fixed;
+  bottom: 30px;
+  right: -40px;
+
+  padding: 10px;
+
+  background: get-color('primary');
+  border: none;
+  cursor: pointer;
+
+  transition: transform $transition-time, right $transition-time;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.btn-top .btn-top__icon {
+  width: 20px;
+  height: 20px;
+
+  path {
+    fill: #fff;
+  }
+}
+
+.btn-top.is-active {
+  right: 30px;
+}

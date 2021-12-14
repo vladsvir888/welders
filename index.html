@@ -115,17 +115,17 @@
         <div class="products__item">
           <h3 class="products__item-title">Дуговая сварка <br> MMA</h3>
           <img src="./assets/images/product-1.png" alt="product-1" class="products__item-img">
-          <button class="products__item-btn btn">Нажмите для просмотра</button>
+          <button class="products__item-btn btn" data-scroll-to="arc-welding">Нажмите для просмотра</button>
         </div>
         <div class="products__item">
           <h3 class="products__item-title">Полуавтоматическая <br> MIG</h3>
           <img src="./assets/images/product-2.png" alt="product-2" class="products__item-img">
-          <button class="products__item-btn btn">Нажмите для просмотра</button>
+          <button class="products__item-btn btn" data-scroll-to="combined-welding">Нажмите для просмотра</button>
         </div>
         <div class="products__item">
           <h3 class="products__item-title">Комбинированная <br> MIG/MMA</h3>
           <img src="./assets/images/product-3.png" alt="product-3" class="products__item-img">
-          <button class="products__item-btn btn">Нажмите для просмотра</button>
+          <button class="products__item-btn btn" data-scroll-to="automatic-welding">Нажмите для просмотра</button>
         </div>
       </div>
     </div>
@@ -133,25 +133,28 @@
   <!-- /.products -->
 
   <!-- product-first -->
-  <section class="product">
+  <section class="product section arc-welding">
     <div class="container product__container">
       <h2 class="product__title">
         <span class="product__title-span title">Дуговая сварка</span>
         <span>MMA</span>
       </h2>
       <div class="product__wrap">
-        <div class="product__subtitle">Нужна меньше мощность? Жми</div>
-        <div class="product__header">
-          <button class="product__header-tab is-active btn">320 PRO</button>
-          <button class="product__header-tab btn">320 PRO S</button>
-          <button class="product__header-tab btn">270 PRO</button>
-          <button class="product__header-tab btn">270 PRO S</button>
-          <button class="product__header-tab btn">250 PRO</button>
-          <button class="product__header-tab btn">200 PRO</button>
+        <div class="product__subtitle">
+          Нужна меньше мощность?
+          <span class="product__subtitle-span">Жми</span>
         </div>
-        <div class="product__info">
+        <div class="product__header">
+          <button data-tab="1" class="product__header-tab is-active btn" type="button">320 PRO</button>
+          <button data-tab="2" class="product__header-tab btn" type="button">320 PRO S</button>
+          <button data-tab="3" class="product__header-tab btn" type="button">270 PRO</button>
+          <button data-tab="4" class="product__header-tab btn" type="button">270 PRO S</button>
+          <button data-tab="5" class="product__header-tab btn" type="button">250 PRO</button>
+          <button data-tab="6" class="product__header-tab btn" type="button">200 PRO</button>
+        </div>
+        <div data-tab-content="1" class="product__info fade show">
           <div class="product__info-start">
-            <img class="product__info-img" src="./assets/images/product-320.png" alt="product-320">
+            <img class="product__info-img" src="./assets/images/product-320pro.png" alt="product-mma-320-pro">
             <div class="product__info-reserve">Осталось 6 сварщиков по акции</div>
           </div>
           <div class="product__info-end">
@@ -187,13 +190,553 @@
             </form>
           </div>
         </div>
+        <div data-tab-content="2" class="product__info fade">
+          <div class="product__info-start">
+            <img class="product__info-img" src="./assets/images/product-320pro.png" alt="product-mma-320-pro-s">
+            <div class="product__info-reserve">Осталось 6 сварщиков по акции</div>
+          </div>
+          <div class="product__info-end">
+            <h3 class="product__info-title">Shtenli MMA-320 PRO S</h3>
+            <p class="product__info-text">Характеристики:</p>
+            <ul class="product__info-ul">
+              <li class="product__info-li">
+                Напряжение 220/230 В
+              </li>
+              <li class="product__info-li">
+                Частота 50/60 Гц
+              </li>
+              <li class="product__info-li">
+                Номинальный входной ток 24 А
+              </li>
+              <li class="product__info-li">
+                Диапазон регулировки 20-270 А
+              </li>
+              <li class="product__info-li">
+                Диаметр электрода 1.6-4 мм
+              </li>
+              <li class="product__info-li">
+                Кабель-держак 2,5 м
+              </li>
+            </ul>
+            <div class="product__info-price">
+              <div class="product__old-price">464 руб.</div>
+              <div class="product__new-price">232 руб.</div>
+            </div>
+            <form action="/" class="product__info-form">
+              <input class="product__info-form-input" type="text" placeholder="Номер телефона..." required>
+              <button class="product__info-form-btn btn" type="submit">Заказать</button>
+            </form>
+          </div>
+        </div>
+        <div data-tab-content="3" class="product__info fade">
+          <div class="product__info-start">
+            <img class="product__info-img" src="./assets/images/product-270pro.png" alt="product-mma-270-pro">
+            <div class="product__info-reserve">Осталось 6 сварщиков по акции</div>
+          </div>
+          <div class="product__info-end">
+            <h3 class="product__info-title">Shtenli MMA-270 PRO</h3>
+            <p class="product__info-text">Характеристики:</p>
+            <ul class="product__info-ul">
+              <li class="product__info-li">
+                Напряжение 220/230 В
+              </li>
+              <li class="product__info-li">
+                Частота 50/60 Гц
+              </li>
+              <li class="product__info-li">
+                Номинальный входной ток 24 А
+              </li>
+              <li class="product__info-li">
+                Диапазон регулировки 20-270 А
+              </li>
+              <li class="product__info-li">
+                Диаметр электрода 1.6-4 мм
+              </li>
+              <li class="product__info-li">
+                Кабель-держак 2,5 м
+              </li>
+            </ul>
+            <div class="product__info-price">
+              <div class="product__old-price">400 руб.</div>
+              <div class="product__new-price">200 руб.</div>
+            </div>
+            <form action="/" class="product__info-form">
+              <input class="product__info-form-input" type="text" placeholder="Номер телефона..." required>
+              <button class="product__info-form-btn btn" type="submit">Заказать</button>
+            </form>
+          </div>
+        </div>
+        <div data-tab-content="4" class="product__info fade">
+          <div class="product__info-start">
+            <img class="product__info-img" src="./assets/images/product-270pro.png" alt="product-mma-270-pro-s">
+            <div class="product__info-reserve">Осталось 6 сварщиков по акции</div>
+          </div>
+          <div class="product__info-end">
+            <h3 class="product__info-title">Shtenli MMA-270 PRO S</h3>
+            <p class="product__info-text">Характеристики:</p>
+            <ul class="product__info-ul">
+              <li class="product__info-li">
+                Напряжение 220/230 В
+              </li>
+              <li class="product__info-li">
+                Частота 50/60 Гц
+              </li>
+              <li class="product__info-li">
+                Номинальный входной ток 24 А
+              </li>
+              <li class="product__info-li">
+                Диапазон регулировки 20-270 А
+              </li>
+              <li class="product__info-li">
+                Диаметр электрода 1.6-4 мм
+              </li>
+              <li class="product__info-li">
+                Кабель-держак 2,5 м
+              </li>
+            </ul>
+            <div class="product__info-price">
+              <div class="product__old-price">380 руб.</div>
+              <div class="product__new-price">190 руб.</div>
+            </div>
+            <form action="/" class="product__info-form">
+              <input class="product__info-form-input" type="text" placeholder="Номер телефона..." required>
+              <button class="product__info-form-btn btn" type="submit">Заказать</button>
+            </form>
+          </div>
+        </div>
+        <div data-tab-content="5" class="product__info fade">
+          <div class="product__info-start">
+            <img class="product__info-img" src="./assets/images/product-250pro.png" alt="product-mma-250-pro">
+            <div class="product__info-reserve">Осталось 6 сварщиков по акции</div>
+          </div>
+          <div class="product__info-end">
+            <h3 class="product__info-title">Shtenli MMA-250 PRO</h3>
+            <p class="product__info-text">Характеристики:</p>
+            <ul class="product__info-ul">
+              <li class="product__info-li">
+                Напряжение 220/230 В
+              </li>
+              <li class="product__info-li">
+                Частота 50/60 Гц
+              </li>
+              <li class="product__info-li">
+                Номинальный входной ток 24 А
+              </li>
+              <li class="product__info-li">
+                Диапазон регулировки 20-270 А
+              </li>
+              <li class="product__info-li">
+                Диаметр электрода 1.6-4 мм
+              </li>
+              <li class="product__info-li">
+                Кабель-держак 2,5 м
+              </li>
+            </ul>
+            <div class="product__info-price">
+              <div class="product__old-price">360 руб.</div>
+              <div class="product__new-price">180 руб.</div>
+            </div>
+            <form action="/" class="product__info-form">
+              <input class="product__info-form-input" type="text" placeholder="Номер телефона..." required>
+              <button class="product__info-form-btn btn" type="submit">Заказать</button>
+            </form>
+          </div>
+        </div>
+        <div data-tab-content="6" class="product__info fade">
+          <div class="product__info-start">
+            <img class="product__info-img" src="./assets/images/product-200pro.png" alt="product-mma-200-pro-s">
+            <div class="product__info-reserve">Осталось 6 сварщиков по акции</div>
+          </div>
+          <div class="product__info-end">
+            <h3 class="product__info-title">Shtenli MMA-200 PRO</h3>
+            <p class="product__info-text">Характеристики:</p>
+            <ul class="product__info-ul">
+              <li class="product__info-li">
+                Напряжение 220/230 В
+              </li>
+              <li class="product__info-li">
+                Частота 50/60 Гц
+              </li>
+              <li class="product__info-li">
+                Номинальный входной ток 24 А
+              </li>
+              <li class="product__info-li">
+                Диапазон регулировки 20-270 А
+              </li>
+              <li class="product__info-li">
+                Диаметр электрода 1.6-4 мм
+              </li>
+              <li class="product__info-li">
+                Кабель-держак 2,5 м
+              </li>
+            </ul>
+            <div class="product__info-price">
+              <div class="product__old-price">350 руб.</div>
+              <div class="product__new-price">175 руб.</div>
+            </div>
+            <form action="/" class="product__info-form">
+              <input class="product__info-form-input" type="text" placeholder="Номер телефона..." required>
+              <button class="product__info-form-btn btn" type="submit">Заказать</button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </section>
   <!-- /.product-first -->
 
+  <!-- product-second -->
+  <section class="product section combined-welding">
+    <div class="container product__container">
+      <h2 class="product__title">
+        <span class="product__title-span title">Полуавтоматическая сварка</span>
+        <span>MIG</span>
+      </h2>
+      <div class="product__wrap">
+        <div class="product__subtitle product__subtitle--center">
+          Нужна меньше мощность?
+          <span class="product__subtitle-span">Жми</span>
+        </div>
+        <div class="product__header product__header--center">
+          <button data-tab="1" class="product__header-tab is-active btn" type="button">220 PRO</button>
+          <button data-tab="2" class="product__header-tab btn" type="button">220 PRO S</button>
+          <button data-tab="3" class="product__header-tab btn" type="button">250 PRO</button>
+          <button data-tab="4" class="product__header-tab btn" type="button">250 PRO S</button>
+        </div>
+        <div data-tab-content="1" class="product__info fade show">
+          <div class="product__info-start">
+            <img class="product__info-img" src="./assets/images/product-mig-220.png" alt="product-mig-220">
+            <div class="product__info-reserve">Осталось 6 сварщиков по акции</div>
+          </div>
+          <div class="product__info-end">
+            <h3 class="product__info-title">Shtenli MIG-220 PRO</h3>
+            <p class="product__info-text">Характеристики:</p>
+            <ul class="product__info-ul">
+              <li class="product__info-li">
+                Напряжение 220/230 В
+              </li>
+              <li class="product__info-li">
+                Частота 50/60 Гц
+              </li>
+              <li class="product__info-li">
+                Номинальный входной ток 24 А
+              </li>
+              <li class="product__info-li">
+                Диапазон регулировки 20-270 А
+              </li>
+              <li class="product__info-li">
+                Диаметр электрода 1.6-4 мм
+              </li>
+              <li class="product__info-li">
+                Кабель-держак 2,5 м
+              </li>
+            </ul>
+            <div class="product__info-price">
+              <div class="product__old-price">424 руб.</div>
+              <div class="product__new-price">212 руб.</div>
+            </div>
+            <form action="/" class="product__info-form">
+              <input class="product__info-form-input" type="text" placeholder="Номер телефона..." required>
+              <button class="product__info-form-btn btn" type="submit">Заказать</button>
+            </form>
+          </div>
+        </div>
+        <div data-tab-content="2" class="product__info fade">
+          <div class="product__info-start">
+            <img class="product__info-img" src="./assets/images/product-mig-220-s.png" alt="product-mig-220-s">
+            <div class="product__info-reserve">Осталось 6 сварщиков по акции</div>
+          </div>
+          <div class="product__info-end">
+            <h3 class="product__info-title">Shtenli MIG-220 PRO S</h3>
+            <p class="product__info-text">Характеристики:</p>
+            <ul class="product__info-ul">
+              <li class="product__info-li">
+                Напряжение 220/230 В
+              </li>
+              <li class="product__info-li">
+                Частота 50/60 Гц
+              </li>
+              <li class="product__info-li">
+                Номинальный входной ток 24 А
+              </li>
+              <li class="product__info-li">
+                Диапазон регулировки 20-270 А
+              </li>
+              <li class="product__info-li">
+                Диаметр электрода 1.6-4 мм
+              </li>
+              <li class="product__info-li">
+                Кабель-держак 2,5 м
+              </li>
+            </ul>
+            <div class="product__info-price">
+              <div class="product__old-price">464 руб.</div>
+              <div class="product__new-price">232 руб.</div>
+            </div>
+            <form action="/" class="product__info-form">
+              <input class="product__info-form-input" type="text" placeholder="Номер телефона..." required>
+              <button class="product__info-form-btn btn" type="submit">Заказать</button>
+            </form>
+          </div>
+        </div>
+        <div data-tab-content="3" class="product__info fade">
+          <div class="product__info-start">
+            <img class="product__info-img" src="./assets/images/product-mig-250.png" alt="product-mig-250">
+            <div class="product__info-reserve">Осталось 6 сварщиков по акции</div>
+          </div>
+          <div class="product__info-end">
+            <h3 class="product__info-title">Shtenli MIG-250 PRO</h3>
+            <p class="product__info-text">Характеристики:</p>
+            <ul class="product__info-ul">
+              <li class="product__info-li">
+                Напряжение 220/230 В
+              </li>
+              <li class="product__info-li">
+                Частота 50/60 Гц
+              </li>
+              <li class="product__info-li">
+                Номинальный входной ток 24 А
+              </li>
+              <li class="product__info-li">
+                Диапазон регулировки 20-270 А
+              </li>
+              <li class="product__info-li">
+                Диаметр электрода 1.6-4 мм
+              </li>
+              <li class="product__info-li">
+                Кабель-держак 2,5 м
+              </li>
+            </ul>
+            <div class="product__info-price">
+              <div class="product__old-price">400 руб.</div>
+              <div class="product__new-price">200 руб.</div>
+            </div>
+            <form action="/" class="product__info-form">
+              <input class="product__info-form-input" type="text" placeholder="Номер телефона..." required>
+              <button class="product__info-form-btn btn" type="submit">Заказать</button>
+            </form>
+          </div>
+        </div>
+        <div data-tab-content="4" class="product__info fade">
+          <div class="product__info-start">
+            <img class="product__info-img" src="./assets/images/product-mig-250s.png" alt="product-mig-250-s">
+            <div class="product__info-reserve">Осталось 6 сварщиков по акции</div>
+          </div>
+          <div class="product__info-end">
+            <h3 class="product__info-title">Shtenli MIG-250 PRO S</h3>
+            <p class="product__info-text">Характеристики:</p>
+            <ul class="product__info-ul">
+              <li class="product__info-li">
+                Напряжение 220/230 В
+              </li>
+              <li class="product__info-li">
+                Частота 50/60 Гц
+              </li>
+              <li class="product__info-li">
+                Номинальный входной ток 24 А
+              </li>
+              <li class="product__info-li">
+                Диапазон регулировки 20-270 А
+              </li>
+              <li class="product__info-li">
+                Диаметр электрода 1.6-4 мм
+              </li>
+              <li class="product__info-li">
+                Кабель-держак 2,5 м
+              </li>
+            </ul>
+            <div class="product__info-price">
+              <div class="product__old-price">380 руб.</div>
+              <div class="product__new-price">190 руб.</div>
+            </div>
+            <form action="/" class="product__info-form">
+              <input class="product__info-form-input" type="text" placeholder="Номер телефона..." required>
+              <button class="product__info-form-btn btn" type="submit">Заказать</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.product-second -->
+
+  <!-- product-third -->
+  <section class="product section automatic-welding">
+    <div class="container product__container">
+      <h2 class="product__title">
+        <span class="product__title-span title">Комбинированная сварка</span>
+        <span>MIG/MMA</span>
+      </h2>
+      <div class="product__wrap">
+        <div class="product__subtitle product__subtitle--center">
+          Нужна меньше мощность?
+          <span class="product__subtitle-span">Жми</span>
+        </div>
+        <div class="product__header product__header--center">
+          <button data-tab="1" class="product__header-tab is-active btn" type="button">220 PRO</button>
+          <button data-tab="2" class="product__header-tab btn" type="button">220 PRO S</button>
+          <button data-tab="3" class="product__header-tab btn" type="button">250 PRO</button>
+          <button data-tab="4" class="product__header-tab btn" type="button">250 PRO S</button>
+        </div>
+        <div data-tab-content="1" class="product__info fade show">
+          <div class="product__info-start">
+            <img class="product__info-img" src="./assets/images/product-mig-mma-220.png" alt="product-mig-mma-220">
+            <div class="product__info-reserve">Осталось 6 сварщиков по акции</div>
+          </div>
+          <div class="product__info-end">
+            <h3 class="product__info-title">Shtenli MIG/MMA-220 PRO</h3>
+            <p class="product__info-text">Характеристики:</p>
+            <ul class="product__info-ul">
+              <li class="product__info-li">
+                Напряжение 220/230 В
+              </li>
+              <li class="product__info-li">
+                Частота 50/60 Гц
+              </li>
+              <li class="product__info-li">
+                Номинальный входной ток 24 А
+              </li>
+              <li class="product__info-li">
+                Диапазон регулировки 20-270 А
+              </li>
+              <li class="product__info-li">
+                Диаметр электрода 1.6-4 мм
+              </li>
+              <li class="product__info-li">
+                Кабель-держак 2,5 м
+              </li>
+            </ul>
+            <div class="product__info-price">
+              <div class="product__old-price">424 руб.</div>
+              <div class="product__new-price">212 руб.</div>
+            </div>
+            <form action="/" class="product__info-form">
+              <input class="product__info-form-input" type="text" placeholder="Номер телефона..." required>
+              <button class="product__info-form-btn btn" type="submit">Заказать</button>
+            </form>
+          </div>
+        </div>
+        <div data-tab-content="2" class="product__info fade">
+          <div class="product__info-start">
+            <img class="product__info-img" src="./assets/images/product-mig-mma-220.png" alt="product-mig-mma-220s">
+            <div class="product__info-reserve">Осталось 6 сварщиков по акции</div>
+          </div>
+          <div class="product__info-end">
+            <h3 class="product__info-title">Shtenli MMA-320 PRO S</h3>
+            <p class="product__info-text">Характеристики:</p>
+            <ul class="product__info-ul">
+              <li class="product__info-li">
+                Напряжение 220/230 В
+              </li>
+              <li class="product__info-li">
+                Частота 50/60 Гц
+              </li>
+              <li class="product__info-li">
+                Номинальный входной ток 24 А
+              </li>
+              <li class="product__info-li">
+                Диапазон регулировки 20-270 А
+              </li>
+              <li class="product__info-li">
+                Диаметр электрода 1.6-4 мм
+              </li>
+              <li class="product__info-li">
+                Кабель-держак 2,5 м
+              </li>
+            </ul>
+            <div class="product__info-price">
+              <div class="product__old-price">464 руб.</div>
+              <div class="product__new-price">232 руб.</div>
+            </div>
+            <form action="/" class="product__info-form">
+              <input class="product__info-form-input" type="text" placeholder="Номер телефона..." required>
+              <button class="product__info-form-btn btn" type="submit">Заказать</button>
+            </form>
+          </div>
+        </div>
+        <div data-tab-content="3" class="product__info fade">
+          <div class="product__info-start">
+            <img class="product__info-img" src="./assets/images/product-mig-mma-250.png" alt="product-270">
+            <div class="product__info-reserve">Осталось 6 сварщиков по акции</div>
+          </div>
+          <div class="product__info-end">
+            <h3 class="product__info-title">Shtenli MIG/MMA-250 PRO</h3>
+            <p class="product__info-text">Характеристики:</p>
+            <ul class="product__info-ul">
+              <li class="product__info-li">
+                Напряжение 220/230 В
+              </li>
+              <li class="product__info-li">
+                Частота 50/60 Гц
+              </li>
+              <li class="product__info-li">
+                Номинальный входной ток 24 А
+              </li>
+              <li class="product__info-li">
+                Диапазон регулировки 20-270 А
+              </li>
+              <li class="product__info-li">
+                Диаметр электрода 1.6-4 мм
+              </li>
+              <li class="product__info-li">
+                Кабель-держак 2,5 м
+              </li>
+            </ul>
+            <div class="product__info-price">
+              <div class="product__old-price">400 руб.</div>
+              <div class="product__new-price">200 руб.</div>
+            </div>
+            <form action="/" class="product__info-form">
+              <input class="product__info-form-input" type="text" placeholder="Номер телефона..." required>
+              <button class="product__info-form-btn btn" type="submit">Заказать</button>
+            </form>
+          </div>
+        </div>
+        <div data-tab-content="4" class="product__info fade">
+          <div class="product__info-start">
+            <img class="product__info-img" src="./assets/images/product-mig-mma-250s.png" alt="product-270-s">
+            <div class="product__info-reserve">Осталось 6 сварщиков по акции</div>
+          </div>
+          <div class="product__info-end">
+            <h3 class="product__info-title">Shtenli MIG/MMA-250 PRO S</h3>
+            <p class="product__info-text">Характеристики:</p>
+            <ul class="product__info-ul">
+              <li class="product__info-li">
+                Напряжение 220/230 В
+              </li>
+              <li class="product__info-li">
+                Частота 50/60 Гц
+              </li>
+              <li class="product__info-li">
+                Номинальный входной ток 24 А
+              </li>
+              <li class="product__info-li">
+                Диапазон регулировки 20-270 А
+              </li>
+              <li class="product__info-li">
+                Диаметр электрода 1.6-4 мм
+              </li>
+              <li class="product__info-li">
+                Кабель-держак 2,5 м
+              </li>
+            </ul>
+            <div class="product__info-price">
+              <div class="product__old-price">380 руб.</div>
+              <div class="product__new-price">190 руб.</div>
+            </div>
+            <form action="/" class="product__info-form">
+              <input class="product__info-form-input" type="text" placeholder="Номер телефона..." required>
+              <button class="product__info-form-btn btn" type="submit">Заказать</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.product-third -->
+
   <!-- payment -->
-  <section class="payment">
+  <section class="payment section">
     <div class="container payment__container">
       <h2 class="payment__title title">Рассрочка</h2>
       <div class="payment__wrapper">
@@ -209,7 +752,7 @@
   <!-- /.payment -->
 
   <!-- delivery -->
-  <section class="delivery">
+  <section class="delivery section">
     <div class="container delivery__container">
       <h2 class="delivery__title title">Доставка</h2>
       <div class="delivery__wrap">
@@ -250,6 +793,12 @@
     </div>
   </footer>
   <!-- /.footer -->
+
+  <!-- btn-top -->
+  <button class="btn-top">
+    <i class="fas fa-arrow-up btn-top__icon"></i>
+  </button>
+  <!-- /.btn-top -->
 
 <script src="./dist/bundle.js"></script>
 </body>

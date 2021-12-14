@@ -160,7 +160,7 @@
 
     color: #fff;
 
-    background-color: #D90202;
+    background-color: get-color('accent');
 
     transition: background-color $transition-time;
 

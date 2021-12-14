@@ -1,12 +1,12 @@
 .payment {
-  padding: 40px 0;
+  // padding: 40px 0;
 
-  @media (max-width: $break_sm) {
-    padding: 40px 0 0;
-  }
+  // @media (max-width: $break_sm) {
+  //   padding: 40px 0 0;
+  // }
 
   &__container {
-    max-width: 1400px; // *
+    max-width: 1400px;
   }
 
   &__title {
@@ -22,7 +22,7 @@
 
       width: 100px;
 
-      background: #D90202;
+      background: get-color('accent');
     }
   }
 
