@@ -1,9 +1,11 @@
+import util from './util';
+
 export default () => {
   const productContainers = document.querySelectorAll('.product__container');
 
   productContainers.forEach(container => {
     container.addEventListener('click', (e) => {
-      const btn = e.target.closest('.product__header-tab');
+      const btn = util.closestItemByClass(e.target, 'product__header-tab');
 
       if (btn === null) return;
 

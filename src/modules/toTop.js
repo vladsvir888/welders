@@ -15,5 +15,4 @@ export default () => {
       behavior: 'smooth',
     });
   });
-  
 };

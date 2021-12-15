@@ -35,6 +35,10 @@ export default {
       return null;
   },
 
+  closePopup() {
+    document.querySelector('.popup.is-active').classList.remove('is-active');
+  },
+
   hamburger: document.querySelector('.hamburger'),
 
   menu: document.querySelector('.menu__list'),
