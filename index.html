@@ -31,27 +31,31 @@
 
 <!-- header -->
 <header class="header">
-  <a href="#" class="header__logo-link">
-    <img src="./assets/images/logo.jpg" alt="logo" class="header__logo">
-  </a>
-  <div class="header__callback">
-    <div class="header__phones">
-      <a href="tel:+375445435904" class="header__phone">
-        <img class="header__phone-img" src="./assets/images/a1.jpg" alt="a1">
-        +375 (44) 543-59-04
-      </a>
-      <a href="tel:+375295435904" class="header__phone">
-        <img class="header__phone-img" src="./assets/images/mts.jpg" alt="mts">
-        +375 (29) 543-59-04
-      </a>
+  <div class="container header__container">
+    <a href="#" class="header__logo-link">
+      <img src="./assets/images/logo.jpg" alt="logo" class="header__logo">
+    </a>
+    <div class="header__callback">
+      <div class="header__phones">
+        <a href="tel:+375445435904" class="header__phone">
+          <img class="header__phone-img" src="./assets/images/a1.jpg" alt="a1">
+          +375 (44) 543-59-04
+        </a>
+        <a href="tel:+375295435904" class="header__phone">
+          <img class="header__phone-img" src="./assets/images/mts.jpg" alt="mts">
+          +375 (29) 543-59-04
+        </a>
+      </div>
+      <button class="header__callback-btn btn popup-btn" type="button" data-popup="popup-callback">
+        Заказать звонок
+      </button>
     </div>
-    <button class="header__callback-btn btn" type="button" data-popup="popup-callback">Заказать звонок</button>
-  </div>
-  <img src="./assets/images/shtenli-white.png" alt="shtenli" class="header__brand">
-  <div class="hamburger">
-    <span class="hamburger__item"></span>
-    <span class="hamburger__item"></span>
-    <span class="hamburger__item"></span>
+    <img src="./assets/images/shtenli-white.png" alt="shtenli" class="header__brand">
+    <div class="hamburger">
+      <span class="hamburger__item"></span>
+      <span class="hamburger__item"></span>
+      <span class="hamburger__item"></span>
+    </div>
   </div>
 </header>
 <!-- /.header -->
@@ -133,7 +137,9 @@
       <div class="products__item animate__animated animate__fadeIn wow" data-wow-delay="0.3s">
         <h3 class="products__item-title">Дуговая сварка <br> MMA</h3>
         <img src="./assets/images/product-1.png" alt="product-1" class="products__item-img">
-        <button class="products__item-btn btn" data-scroll-to="arc-welding">Нажмите для просмотра</button>
+        <button class="products__item-btn btn" data-scroll-to="arc-welding">
+          <span>Нажмите для просмотра</span>
+        </button>
       </div>
       <div class="products__item animate__animated animate__fadeIn wow" data-wow-delay="0.6s">
         <h3 class="products__item-title">Полуавтоматическая <br> MIG</h3>
@@ -777,7 +783,7 @@
       <div class="delivery__item animate__animated animate__fadeInUp wow" data-wow-delay="0.3s">
         <h3 class="delivery__item-title">Оформление заказа</h3>
         <p class="delivery__item-text">на сайте или по телефону</p>
-        <button class=" delivery__item-btn btn" type="button" data-popup="popup-callback">Заказать</button>
+        <button class=" delivery__item-btn btn popup-btn" type="button" data-popup="popup-callback">Заказать</button>
       </div>
       <div class="delivery__item animate__animated animate__fadeInUp wow" data-wow-delay="0.6s">
         <h3 class="delivery__item-title">Доставка по Беларуси</h3>
@@ -813,13 +819,13 @@
 <!-- /.footer -->
 
 <!-- btn-top -->
-<button class="btn-top">
+<button class="btn-top" aria-label="up">
   <i class="fas fa-arrow-up btn-top__icon"></i>
 </button>
 <!-- /.btn-top -->
 
 <!-- modal -->
-<div class="popup-callback">
+<div class="popup-callback popup">
   <div class="popup-callback__wrap">
       <h2 class="popup-callback__title">Оставьте Ваш номер телефона</h2>
       <p class="popup-callback__text">И наш консультант с Вами свяжется</p>
@@ -836,9 +842,7 @@
           <input type="text" class="popup-callback__form-input" placeholder="Ваш номер телефона" required>
           <button class="popup-callback__form-btn" type="submit">Отправить заявку</button>
       </form>
-      <button class="popup-callback__btn-close" type="button">
-          Закрыть
-      </button>
+      <button class="popup-callback__btn-close popup__btn-close" type="button" aria-label="close"></button>
   </div>
 </div>
 <!-- /.modal -->

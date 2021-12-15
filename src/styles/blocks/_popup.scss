@@ -1,41 +1,54 @@
 .popup-callback {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-
-  background: rgba(0, 0, 0, .7);
-  overflow: auto;
-
   &__wrap {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 30px;
-    width: 800px;
+    margin: auto;
+    width: 700px;
 
     color: #fff;
 
     background-color: get-color('primary');
+    border-radius: 3px;
+    transform: translateX(20%);
+
+    transition: transform $transition-time;
 
     >* {
-      margin-bottom: 10px;
+      &:not(:nth-last-child(-n + 2)) {
+        margin-bottom: 10px;
+      }
+    }
+
+    @media (max-width: $break_md) {
+      width: 100%;
+      min-height: 100vh;
+    }
+
+    @media (max-width: $break_sm) {
+      padding: 30px 10px;
     }
   }
 
   &__title {
     font-size: 32px;
+    text-align: center;
+
+    @media (max-width: $break_sm) {
+      font-size: 23px;
+    }
   }
 
   &__text {
     font-size: 24px;
+    text-align: center;
+
+    @media (max-width: $break_sm) {
+      font-size: 18px;
+    }
   }
 
   &__link {
@@ -66,6 +79,10 @@
         margin-bottom: 10px;
       }
     }
+
+    @media (max-width: $break_sm) {
+      width: 300px;
+    }
   }
 
   &__form-input {
@@ -77,5 +94,77 @@
 
     background-color: get-color('accent');
     cursor: pointer;
+
+    transition: background-color $transition-time;
+
+    &:hover {
+      background-color: rgba(217, 2, 2, 0.8);
+    }
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    height: 30px;
+    width: 30px;
+    margin-bottom: 0;
+    padding: 0;
+
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    &::after,
+    &::before {
+      position: absolute;
+      top: 23px;
+      left: 0;
+      right: 0;
+
+      height: 3px;
+
+      background-color: #fff;
+
+      content: '';
+    }
+
+    &::after {
+      transform: translateY(-10px) rotate(45deg);
+    }
+
+    &::before {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, .7);
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity $transition-time;
+}
+
+.popup.is-active {
+  visibility: visible;
+  opacity: 1;
+
+  .popup-callback__wrap {
+    transform: translateX(0);
   }
 }

@@ -30,6 +30,7 @@ import LightCountdown from "./modules/lightCountdown/lightCountdown";
 import tabs from "./modules/tabs";
 import toTop from "./modules/toTop";
 import scrollTo from "./modules/scrollTo";
+import popup from "./modules/popup";
 
 form();
 document.addEventListener('DOMContentLoaded', () => {
@@ -39,4 +40,5 @@ document.addEventListener('DOMContentLoaded', () => {
   tabs();
   toTop();
   scrollTo();
+  popup();
 });

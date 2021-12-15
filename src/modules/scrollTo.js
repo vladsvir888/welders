@@ -1,11 +1,11 @@
-import util from './util';
-
 export default () => {
   const productBtns = document.querySelectorAll('.products__item-btn');
 
   productBtns.forEach(elem => {
-    elem.addEventListener('click', () => {
-      const productBtnAttr = util.closestAttr(elem, 'data-scroll-to');
+    elem.addEventListener('click', (e) => {
+      const target = e.currentTarget;
+
+      const productBtnAttr = target.getAttribute('data-scroll-to');
 
       if (productBtnAttr === null) return;
 

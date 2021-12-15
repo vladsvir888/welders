@@ -1,25 +1,25 @@
-import util from './util';
-
 export default () => {
-  util.body.addEventListener('click', (e) => {
-    if (!e.target.classList.contains('product__header-tab')) return;
+  const productContainers = document.querySelectorAll('.product__container');
 
-    const closestWrapProduct = e.target.closest('.product__wrap');
+  productContainers.forEach(container => {
+    container.addEventListener('click', (e) => {
+      const btn = e.target.closest('.product__header-tab');
 
-    const prevBtnActive = closestWrapProduct.querySelector('.product__header-tab.is-active');
+      if (btn === null) return;
 
-    prevBtnActive.classList.remove('is-active');
+      container.querySelector('.product__header-tab.is-active').classList.remove('is-active');
 
-    e.target.classList.add('is-active');
+      btn.classList.add('is-active');
 
-    const productInfo = closestWrapProduct.querySelectorAll('.product__info');
+      const productCards = container.querySelectorAll('.product__info');
 
-    productInfo.forEach(elem => {
-      if (elem.getAttribute('data-tab-content') === e.target.getAttribute('data-tab')) {
-        elem.classList.add('show');
-      } else {
-        elem.classList.remove('show');
-      }
+      productCards.forEach(card => {
+        if (card.getAttribute('data-tab-content') === btn.getAttribute('data-tab')) {
+          card.classList.add('show');
+        } else {
+          card.classList.remove('show');
+        }
+      });
     });
   });
 };

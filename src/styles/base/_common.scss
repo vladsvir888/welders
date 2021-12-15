@@ -61,6 +61,17 @@ body {
   color: get-color('primary');
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 2000px) {
+  .wow {
+    animation-name: none !important;
+    visibility: visible !important;
+  }
+}
+
 @keyframes fade {
   from {
     opacity: 0.1;
