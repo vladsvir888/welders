@@ -14,6 +14,9 @@ import "animate.css";
 // normalize.css
 import "normalize.css";
 
+// vanilla-lazyload
+import LazyLoad from "vanilla-lazyload";
+
 // swiper
 // import Swiper from '../node_modules/swiper/swiper-bundle.min';
 // import 'swiper/css/bundle';
@@ -41,4 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
   toTop();
   scrollTo();
   popup();
+
+  const lazyLoadInstance = new LazyLoad({
+    elements_selector: '.lazy',
+  });
 });

@@ -44,7 +44,7 @@ module.exports = (env, args) => {
   };
 
   return {
-    target: 'web',
+    target: ['web', 'es5'],
     mode: isDevelopment ? 'development' : 'production',
     entry: {
       bundle: './src/index.js'
@@ -98,9 +98,6 @@ module.exports = (env, args) => {
                 sourceMap: isDevelopment,
               },
             },
-            // {
-            //   loader: 'group-css-media-queries-loader'
-            // },
             {
               loader: 'sass-loader',
               options: {
